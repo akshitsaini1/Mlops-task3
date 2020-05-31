@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+import os
+file_path='/task3/job4/counter.txt'
+if os.path.isfile(file_path):
+	f=open(file_path,'r')
+	counter=int(f.read().split()[0])
+	f.close()
+	f=open(file_path,'w')
+	counter=1
+	f.write(str(counter))
+	f.close()
+else:
+	counter=0
+	f=open(file_path,'w')
+	counter+=1
+	f.write(str(counter))
+	f.close()
